@@ -4,7 +4,7 @@
 
 这是一个深度学习初学者的笔记，跟随教程《动手学深度学习》（d2l）学习，并按章节记录理论与实践代码。初衷是记录自己的学习历程与思考并尝试分享，在完整学习完后会进行系统性整理。目前有 Jupyter Notebook 与 Markdown 两种文档格式，方便多种方式阅读。
 
-学习进度：已学完 Ch7现代卷积神经网络，对应笔记已更新到 7.4（GoogLeNet）；省略了原书的前两章与（主线关联较弱、且暂不影响后续实践推进的部分内容，后续会按需要回补。）
+学习进度：正在学习Ch8循环神经网络，对应笔记已更新到 7.6（ResNet）；省略了原书的前两章与（主线关联较弱、且暂不影响后续实践推进的部分内容，后续会按需要回补。）
 
 
 ## 2. 学习资源
@@ -27,13 +27,16 @@ Study-about-deep-Learning/
 ├── data/
 │   └── FashionMNIST/                    # 练习使用的数据集目录
 ├── docs/
-│   ├── ch3/ ch4/ ch5/ ch6/              # 主要章节 Markdown 笔记
-│   ├── *_files/                         # Notebook/页面导出的辅助资源目录
-│   ├── 4.8 Kaggle房价预测实战/           # 4.8 扩展文档与配套文件
+│   ├── ch3/ ch4/ ch5/ ch6/ ch7/         # 主要章节 Markdown 笔记
+│   │   └── _resources/                  # 各章节导出资源（图片、SVG 等）
+│   ├── projects/
+│   │   └── 4.8 Kaggle房价预测实战/       # 视频课程项目扩展文档与配套文件
+│   │       └── _resources/              # 子目录文档对应导出资源
 │   └── .obsidian/                       # Obsidian 工作区配置与索引
 ├── notebook/
-│   ├── 3.x ~ 7.x *.ipynb                # 主线实验 Notebook
-│   ├── 4.8 Kaggle房价预测实战/           # 视频课程 Kaggle 房价预测比赛实践代码
+│   ├── 3.x ~ 8.x *.ipynb                # 主线实验 Notebook
+│   ├── projects/
+│   │   └── 4.8 Kaggle房价预测实战/       # 视频课程 Kaggle 房价预测比赛实践代码
 │   └── py_proj/                         # 非笔记脚本（训练函数、数据读取等复用代码）
 └── README.md
 ```
@@ -41,10 +44,11 @@ Study-about-deep-Learning/
 非笔记文件（夹）说明：
 
 - `data/FashionMNIST/`：存放原始数据文件，供相关章节直接读取。
-- `docs/*_files/`：导出辅助资源目录（图片、页面依赖等），不是主要阅读入口。
+- `docs/ch*/_resources/`：各章节导出辅助资源目录（图片、页面依赖等），不是主要阅读入口。
+- `docs/projects/4.8 Kaggle房价预测实战/_resources/`：视频课程项目文档中的导出资源。
 - `docs/.obsidian/`：Obsidian 工程配置目录，用于本地笔记管理。
-- `docs/4.8 Kaggle房价预测实战/`：章节扩展资料目录，补充主文档之外的实践记录。
-- `notebook/4.8 Kaggle房价预测实战/`：Kaggle 房价预测比赛的分支实践目录，包含我的实验代码与提交文件。
+- `docs/projects/4.8 Kaggle房价预测实战/`：视频课程项目文档目录，补充主文档之外的实践记录。
+- `notebook/projects/4.8 Kaggle房价预测实战/`：Kaggle 房价预测比赛的分支实践目录，包含我的实验代码与提交文件。
 - `notebook/py_proj/`：复用型 Python 脚本目录，用来减少 Notebook 中重复代码。
 
 ### 学习进度图表
@@ -55,7 +59,8 @@ Study-about-deep-Learning/
 | Ch4 | 多层感知机（MLP） |  |
 | Ch5 | GPU 计算 |  |
 | Ch6 | 卷积神经网络 |  |
-| Ch7 | AlexNet / VGG | 更新中 |
+| Ch7 | 现代卷积神经网络 |  |
+| Ch8 | 循环神经网络 | 更新中 |
 
 ## 4. 使用方式
 
